@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# FizzBuzz
+i=1
+while [ "$i" -le 100 ]; do
+    case $(( i % 15 )) in
+        0)
+            echo "FizzBuzz"
+            ;;
+        *)
+            case $(( i % 3 )) in
+                0) echo "Fizz" ;;
+                *)
+                    case $(( i % 5 )) in
+                        0) echo "Buzz" ;;
+                        *) echo "$i" ;;
+                    esac
+                    ;;
+            esac
+            ;;
+    esac
+    i=$(( i + 1 ))
+done
