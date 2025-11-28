@@ -1,2 +1,2 @@
 #!/bin/bash
-tr '\n' ' ' | cut -d' ' -f "$(seq -s, 1 2 999)" | tr ' ' '\n'
+cat -n | grep '''^[[:space:]]*[1-9]*[13579][[:space:]].*$''' | cut -d$'''	''' -f2
