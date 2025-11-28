@@ -1,9 +1,2 @@
 #!/bin/bash
-i=0
-while IFS= read -r line; do
-    i=$((i + 1))
-    if [ $((i % 2)) -eq 1 ]; then
-        printf '%s\n' "$line"
-    fi
-done
-
+tr "\n" " " | cut -d " " -f $(seq -s "," -w 1 2 $(wc -l < /dev/stdin)) | tr " " "\n"
