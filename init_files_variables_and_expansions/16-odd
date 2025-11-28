@@ -1,2 +1,2 @@
 #!/bin/bash
-tr "\n" " " | cut -d " " -f $(seq -s "," -w 1 2 $(wc -l < /dev/stdin)) | tr " " "\n"
+cat /dev/stdin | tr '\n' ' ' | cut -d ' ' -f {1..999..2} | tr ' ' '\n'
