@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /dev/stdin | tr '\n' ' ' | cut -d ' ' -f {1..999..2} | tr ' ' '\n'
+tr '\n' ' ' | cut -d' ' -f "$(seq -s, 1 2 999)" | tr ' ' '\n'
