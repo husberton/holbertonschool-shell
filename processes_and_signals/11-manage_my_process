@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#idk
 PIDFILE="/var/run/my_process.pid"
 
 case "$1" in
@@ -9,7 +9,7 @@ case "$1" in
         echo $! > "$PIDFILE"
         echo "manage_my_process started"
         ;;
-    
+
     stop)
         # Stop the process
         if [ -f "$PIDFILE" ]; then
@@ -18,7 +18,7 @@ case "$1" in
         fi
         echo "manage_my_process stopped"
         ;;
-    
+
     restart)
         # Stop
         if [ -f "$PIDFILE" ]; then
@@ -30,10 +30,11 @@ case "$1" in
         echo $! > "$PIDFILE"
         echo "manage_my_process restarted"
         ;;
-    
+
     *)
         echo "Usage: manage_my_process {start|stop|restart}"
         exit 1
         ;;
 esac
 
+~
